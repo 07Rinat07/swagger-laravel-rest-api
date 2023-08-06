@@ -53,6 +53,30 @@ use OpenApi\Annotations as OA;
  *             ),
  *         ),
  *      ),
+ *
+ * @OA\Get(
+ *       path="/api/posts/{post}",
+ *       summary="Единичная запись",
+ *       tags={"Post"},
+ *       @OA\Parameter(
+ *           description="ID post",
+ *           in="path",
+ *           name="post",
+ *           required=true,
+ *           example=1
+ *       ),
+ *       @OA\Response(
+ *           response="200",
+ *           description="Ok",
+ *           @OA\JsonContent(
+ *              @OA\Property(property="data", type="object",
+ *                  @OA\Property(property="id", type="integer", example=1),
+ *                  @OA\Property(property="title", type="string", example="Some title"),
+ *                  @OA\Property(property="likes", type="integer", example=20),
+ *              ),
+ *          ),
+ *       ),
+ * ),
  */
 class PostController extends Controller
 {
