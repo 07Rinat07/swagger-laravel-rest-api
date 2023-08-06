@@ -11,7 +11,7 @@ use OpenApi\Annotations as OA;
  *     path="/api/posts",
  *     summary="Создание",
  *     tags={"Post"},
- *
+ *     security={{ "bearerAuth": {} }},
  *     @OA\RequestBody(
  *         @OA\JsonContent(
  *             allOf={
@@ -41,7 +41,7 @@ use OpenApi\Annotations as OA;
  *      path="/api/posts",
  *      summary="Список",
  *      tags={"Post"},
- *
+ *      security={{ "bearerAuth": {} }},
  *      @OA\Response(
  *          response="200",
  *          description="Ok",
@@ -59,6 +59,7 @@ use OpenApi\Annotations as OA;
  *       path="/api/posts/{post}",
  *       summary="Единичная запись",
  *       tags={"Post"},
+ *       security={{ "bearerAuth": {} }},
  *       @OA\Parameter(
  *           description="ID post",
  *           in="path",
@@ -83,6 +84,7 @@ use OpenApi\Annotations as OA;
  *        path="/api/posts/{post}",
  *        summary="Update",
  *        tags={"Post"},
+ *        security={{ "bearerAuth": {} }},
  *        @OA\Parameter(
  *            description="ID post",
  *            in="path",
@@ -119,6 +121,7 @@ use OpenApi\Annotations as OA;
  *        path="/api/posts/{post}",
  *        summary="DELETE",
  *        tags={"Post"},
+ *        security={{ "bearerAuth": {} }},
  *        @OA\Parameter(
  *            description="ID post",
  *            in="path",
