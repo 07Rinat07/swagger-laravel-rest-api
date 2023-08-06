@@ -12,3 +12,4 @@ https://github.com/DarkaOnLine/L5-Swagger
 
 ### To run the project locally, you need to type commands in the terminal in turn ==>
 * php artisan serve
+*  l5-swagger:generate (for Regenerate docs) 
