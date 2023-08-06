@@ -115,7 +115,25 @@ use OpenApi\Annotations as OA;
  *        ),
  *  ),
  *
-
+ * @OA\Delete(
+ *        path="/api/posts/{post}",
+ *        summary="DELETE",
+ *        tags={"Post"},
+ *        @OA\Parameter(
+ *            description="ID post",
+ *            in="path",
+ *            name="post",
+ *            required=true,
+ *            example=1
+ *        ),
+ *        @OA\Response(
+ *            response="200",
+ *            description="Ok",
+ *            @OA\JsonContent(
+ *               @OA\Property(property="message", type="string", example="done"),
+ *           ),
+ *        ),
+ *  ),
  */
 
 class PostController extends Controller
